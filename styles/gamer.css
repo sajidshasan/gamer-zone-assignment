@@ -267,8 +267,7 @@ online gaming section
     opacity: 1;
 
   }
-  .hover-details{
-  }
+
   .hover-details .fa-solid{
     position: relative;
     top: -20px;
@@ -353,6 +352,7 @@ arcade gaming section
     flex-wrap: wrap;
     text-align: left;
     justify-content: center;
+
     word-wrap: none;
     margin: 0px 0px 120px;
 }
@@ -361,12 +361,15 @@ arcade gaming section
     display: flex;
     flex-direction: row;
     padding: 10px;
+    align-items: center;
 }
 
 .aracade-gaming p {
     font-size: 18px;
     font-weight: 500;
     margin-left: 10px;
+
+
 }
 
 .aracade-gaming:hover {
