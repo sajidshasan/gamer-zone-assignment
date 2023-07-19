@@ -211,6 +211,88 @@ online gaming section
     margin-bottom: 10px;
 }
 
+
+
+/* hover section */
+.online-game{
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    /* height: 500.19px; */
+}
+
+.online-game .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 87%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+.online-game:hover .content-overlay{
+    opacity: 1;
+  }
+
+  .online-game img{
+    width: 100%;
+  }
+
+.hover-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .online-game:hover .hover-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+
+  }
+  .hover-details{
+  }
+  .hover-details .fa-solid{
+    position: relative;
+    top: -20px;
+    color: #fff;
+    font-size: 2em;
+
+  }
+  .hover-details p{
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    color: magenta;
+    font-size: 1.5em;
+  }
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  
+  .fadeIn-right{
+    left: 80%;
+  }
+  .online-game3{
+    margin: 0px auto;
+}
+
 /* ================
 instant section
 ====================== */
@@ -288,6 +370,8 @@ arcade gaming section
 }
 
 .aracade-gaming:hover {
+    text-align: center;
+    align-items: center;
     border: 1px solid #FF42A5;
     border-radius: 50px;
     background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
@@ -402,7 +486,9 @@ media query
         flex-direction: column;
         align-items: center;
     }
-
+    .online-game3{
+        margin: 0px;
+    }
 
 
     .online-title{
@@ -413,6 +499,10 @@ media query
     }
     .gaming-para{
         text-align: center;
+    }
+
+    .online-game .content-overlay {
+        height: 93.5%;
     }
 
     
@@ -569,7 +659,16 @@ media query
 
     .online-games {
         flex-direction: column;
+
     }
+
+    .online-game .content-overlay {
+        height: 90.5%;
+    }
+
+
+
+
 
     .instant-playing {
         margin-top: 50px;
