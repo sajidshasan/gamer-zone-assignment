@@ -4,8 +4,11 @@ shared style
 * {
     font-family: 'Work Sans', sans-serif;
     word-wrap: break-word;
+    margin: 0px;
 }
-
+header, main{
+    padding: 0px 100px;
+}
 /* ==================
 header section
 ================== */
@@ -92,14 +95,14 @@ nav,
 
 #attraction-para {
     color: #0B0223;
-    font-size: 48px;
+    font-size: 3em;
     font-weight: 600;
     text-transform: uppercase;
     margin: 0%;
 }
 
 #attraction-title {
-    font-size: 95px;
+    font-size: 90px;
     font-weight: 800;
     text-transform: uppercase;
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -112,7 +115,7 @@ nav,
 .attraction-details,
 .common-para {
     color: #534C64;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: normal;
     text-transform: lowercase;
@@ -175,6 +178,23 @@ online gaming section
     text-align: center;
 }
 
+.online-title {
+    color: #0B0223;
+    font-size: 48px;
+    font-weight: 700;
+}
+.online-para{
+    margin: 50px 0px;
+}
+
+.online-title span {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
 .online-games {
     display: flex;
     justify-content: space-between;
@@ -188,6 +208,7 @@ online gaming section
 
 .online-game img {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 /* ================
@@ -196,15 +217,23 @@ instant section
 .instant-playing {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: right;
     column-gap: 120px;
 }
-.instant1{
+
+.instant1 {
     align-items: center;
+
     gap: 24px;
 }
-.instant-playing > div {
+
+.instant-playing>div {
     width: 50%;
+}
+
+.instant2 {
+    margin-top: 120px;
 }
 
 .instant2 img {
@@ -232,11 +261,111 @@ instant section
     left: -65%;
 }
 
+/* =================
+arcade gaming section
+-------------------- */
+
+.aracade-games {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    word-wrap: none;
+    margin: 0px 0px 120px;
+}
+
+.aracade-gaming {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.aracade-gaming p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.aracade-gaming:hover {
+    border: 1px solid #FF42A5;
+    border-radius: 50px;
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ======================
+footer section
+========================= */
+footer {
+    text-align: center;
+    padding: 120px 0px;
+    background: #0B0223;
+
+}
+
+footer a {
+
+    text-decoration: none;
+    color: black;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #FFF;
+}
+
+.footer2 {
+    margin: 60px 0px;
+
+}
+
+.footer2 a {
+    color: #FFF;
+    margin-right: 50px;
+}
+
+.footer3 {
+
+    margin: 70px 0px 25px 0px;
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer3 .fa-brands {
+    color: #FFF;
+    margin-right: 35px;
+    font-size: xx-large;
+}
+
+.footer4 {
+    margin-top: 64px;
+    margin-bottom: 18px;
+}
+
+.footer4 a,
+.footer5 {
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+}
+
 /* =======================================
 media query
 ========================================== */
 @media screen and (max-width:576px) {
-
+    header, main{
+        padding: 0px 20px;
+    }
     nav,
     .nav-links {
         flex-direction: column;
@@ -248,10 +377,25 @@ media query
         margin-top: 50px;
         flex-direction: column-reverse;
         gap: 50px;
+        margin-bottom: 100px;
     }
 
     .banner>div {
-        width: auto;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #attraction-para {
+        font-size: 2rem;
+    }
+    .attraction-div p{
+        font-size: 1em;
+    }
+
+
+    .online-gaming {
+        margin-top: 50px;
     }
 
     .online-games {
@@ -259,22 +403,43 @@ media query
         align-items: center;
     }
 
-    .online-game {
-        padding: 0;
+
+
+    .online-title{
+        font-size: 1.8em;
+    }
+    .common-para{
+        font-size: 13px;
+    }
+    .gaming-para{
+        text-align: center;
     }
 
-
+    
+    .instant-title{
+        margin-bottom: 50px;
+    }
     .instant-playing {
         flex-direction: column;
+    }
+
+    .instant1 {
+        margin-top: 60px;
+        text-align: center;
     }
 
     .instant-playing>div {
         width: 100%;
     }
 
+    .instant2 {
+        margin-top: 70px;
+    }
+
     .instant2 img {
         width: 80%;
     }
+
 
     .instant2>div,
     .instant-position>img {
@@ -285,14 +450,93 @@ media query
         left: -5.8em;
         bottom: 9.5em;
     }
+
+    .aracade-games {
+        margin: 0%;
+        margin-bottom: 50px;
+        gap: 5px;
+    }
+
+    .aracade-games>div {
+        width: 30%;
+    }
+
+    .aracade-gaming {
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .aracade-gaming>img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .aracade-gaming p {
+        font-size: 13px;
+        margin: 0%;
+        margin-left: 5px;
+    }
+
+    footer {
+        padding: 80px;
+        gap: 50px;
+    }
+
+    .footer1 {
+        margin-bottom: 10px;
+    }
+
+    .footer1 img,
+    .footer-title {
+        font-size: 2em;
+    }
+
+    .footer2 {
+        display: flex;
+        text-align: right;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0%;
+    }
+
+    .footer2>a {
+        font-size: small;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer3 .fa-brands {
+        margin-bottom: 30px;
+    }
+
+    .footer4 {
+        margin-top: 0px;
+    }
+
+    .footer4 a,
+    .footer5 {
+        font-size: .5em;
+        margin-right: 20px;
+    }
+
+    .footer5 {
+        font-size: .5em;
+    }
 }
 
 
 
-
+/* ===========================================
+==========================================
+==================================== */
 @media screen and (min-width:577px) and (max-width:992px) {
-    *{
+    * {
         margin: 0px;
+    }
+    header, main{
+        padding: 0px 50px;
     }
     nav {
         flex-direction: column;
@@ -307,9 +551,20 @@ media query
         margin-bottom: 50px;
     }
 
+
     .banner>div {
         width: 100%;
         align-items: center;
+    }
+
+
+
+
+
+
+
+    .attraction-div p{
+        font-size: 1.5em;
     }
 
     .online-games {
@@ -321,23 +576,44 @@ media query
         flex-direction: column;
         text-align: center;
     }
-    .instant-playing > div{
+
+    .instant-playing>div {
         width: 80%;
 
+    }
+    .instant-title{
+        margin-bottom: 60px;
     }
     .instant2 {
         position: relative;
         right: -5em;
     }
 
-    .instant2 > img {
+    .instant2>img {
         width: 90%;
         margin-left: 50px;
     }
-    .instant-position{
+
+    .instant-position {
         width: 10%;
         left: -17%;
         bottom: 18em;
+    }
+
+    .aracade-games {
+        row-gap: 50px;
+    }
+
+    .aracade-gaming {
+        align-items: center;
+    }
+
+    .footer2 {
+        flex-wrap: wrap;
+    }
+
+    .footer2 a {
+        margin-bottom: 50px;
     }
 
 }
