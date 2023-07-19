@@ -545,13 +545,15 @@ media query
     }
 
     .aracade-games {
-        margin: 0%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         margin-bottom: 50px;
         gap: 5px;
     }
 
-    .aracade-games>div {
-        width: 30%;
+
+    .aracade-games > div {
+        width: 100%;
     }
 
     .aracade-gaming {
@@ -559,14 +561,17 @@ media query
         align-items: center;
         padding: 5px;
     }
-
-    .aracade-gaming>img {
+    .aracade-gaming:hover{
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    .aracade-gaming > img {
         width: 1.5rem;
         height: 1.5rem;
     }
 
     .aracade-gaming p {
-        font-size: 13px;
+        font-size: 11px;
         margin: 0%;
         margin-left: 5px;
     }
